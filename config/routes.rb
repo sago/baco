@@ -1,5 +1,8 @@
 BacoB::Application.routes.draw do
 
+  resources :suppliers
+
+
   get "home/index"
   resources :clients
   resources :products
