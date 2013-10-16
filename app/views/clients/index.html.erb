@@ -1,6 +1,4 @@
-<div class="page-header">
-  <h3>Clientes</h3>
-</div>
+<h4>Clientes</h4>
 <table class="table table-striped" style="background: gainsboro; line-height: 28px;">
   <thead>
     <tr>
@@ -27,6 +25,5 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_client_path,
+<%= link_to 'Nuevo', new_client_path,
             :class => 'btn btn-primary' %>
