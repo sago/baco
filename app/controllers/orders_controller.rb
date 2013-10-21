@@ -63,7 +63,7 @@ class OrdersController < ApplicationController
       end
     end
     order.discount = params[:order][:discount]
-    order.total -= order.discount
+    order.total -= ((order.discount / 100) * order.total)
     order.close_at = Time.now
     if order.save
       redirect_to receipt_order_path(order.id), :layout => nil
