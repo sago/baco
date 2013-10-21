@@ -1,0 +1,63 @@
+<div class="brand">
+  <h4><%= "Checkout del Cliente #{ @client.name }, pedido #{@order.id}" %></h4>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= 'Folio' %>:</strong></dt>
+  <dd><%= @order.id %></dd>
+  <dt><strong><%= 'Fecha/Hora Apertura' %>:</strong></dt>
+  <dd><%= @order.created_at %></dd>
+</dl>
+
+<%= form_for @order, :url => close_order_path(@order), :method => :post do |f| %>
+
+    <table class="table table-striped order-items">
+      <col class="qty-column">
+      <col class="name-column">
+      <col class="price-column">
+      <col class="price-column">
+
+      <thead>
+      <tr>
+        <th><%= 'Cant.' %></th>
+        <th><%= 'Producto' %></th>
+        <th><%= 'Precio' %></th>
+        <th><%= 'Subtotal' %></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @order.order_items.each do |order_item| %>
+          <%= f.fields_for :order_items, order_item do |oi| %>
+              <tr>
+                <td class="td-numeric"><%= oi.text_field :quantity, :class => 'text_field prod-qty' %></td>
+                <td><%= order_item.product.name %></td>
+                <td class="td-numeric"><%= oi.text_field :price, :class => 'text_field prod-qty' %></td>
+                <td class="td-numeric"><%= order_item.price * order_item.quantity %></td>
+              </tr>
+          <% end %>
+
+      <% end %>
+
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td> Descuento: </td>
+        <td class="td-numeric"><%= f.text_field :discount, :class => 'text_field prod-qty' %></td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+
+        <td>Total</td>
+        <td class="td-numeric"><%= @order.total %></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div id="checkout">
+      <%= f.submit 'Cobrar', :class => 'btn btn-primary btn-info prod-submit' %>
+    </div>
+
+<% end %>

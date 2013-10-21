@@ -50,7 +50,7 @@
               <li><%= link_to "Clientes", clients_path  %></li>
               <li><%= link_to "Productos", products_path  %></li>
               <li><%= link_to "Proveedores", suppliers_path  %></li>
-              <li><%= link_to "Ventas", "/path4"  %></li>
+              <li><%= link_to "Ventas", orders_path  %></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -74,18 +74,4 @@
 
   </body>
 
-
 </html>
-<script src="jquery.js"></script>
-<script src="jquery.roundabout.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#my-roundabout').roundabout({
-            btnNext: ".next",
-            duration: 4000,
-            reflect: true,
-            autoplay: true,
-            autoplayDuration: 4000
-        });
-    });
-</script>

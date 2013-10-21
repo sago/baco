@@ -1,16 +1,24 @@
 BacoB::Application.routes.draw do
 
-  resources :orders
-
-
+  resources :orders, :except => [:create] do
+    member do
+      get 'checkout'
+      post 'close'
+      get 'receipt'
+      get 'cancel'
+    end
+  end
   resources :suppliers
 
-
   get "home/index"
-  resources :clients
+  resources :clients do
+    resources :orders, :except => [:create]
+  end
   resources :products
 
-
+  # Order Items to Orders
+  post 'order_items/create' => 'order_items#create', :as => 'add_order_item'
+  get 'order_items/search_products' => 'order_items#search_products'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

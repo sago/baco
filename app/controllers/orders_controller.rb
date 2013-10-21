@@ -3,33 +3,26 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @orders }
-    end
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @order }
-    end
+    @order_items = @order.order_items
+    @order_item = OrderItem.new
+    @client = Client.find(@order.client_id)
   end
 
   # GET /orders/new
   # GET /orders/new.json
   def new
-    @order = Order.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @order }
+    if order = Order.create(:client_id => params[:client_id])
+      redirect_to client_order_path(params[:client_id], order.id)
+    else
+      redirect_to client_path(params[:client_id]), :notice => 'El pedido no se pudo crear!'
     end
+
   end
 
   # GET /orders/1/edit
@@ -37,36 +30,53 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  # POST /orders
-  # POST /orders.json
-  def create
-    @order = Order.new(params[:order])
-
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render json: @order, status: :created, location: @order }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # PUT /orders/1
   # PUT /orders/1.json
   def update
+    order_params = params[:order]
     @order = Order.find(params[:id])
+    @order.client_id = order_params[:client_id]
 
-    respond_to do |format|
-      if @order.update_attributes(params[:order])
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
-        format.json { head :no_content }
+    if @order.save
+      redirect_to orders_path
+    end
+  end
+
+  def checkout
+    @order = Order.find params[:id]
+    @order_items = @order.order_items
+    @client = Client.find(@order.client_id)
+  end
+
+  def close
+    order = Order.find params[:id]
+
+    order_items = params[:order][:order_items_attributes]
+    order_items.each do |index, values|
+      order_item = OrderItem.find values[:id]
+      order_item.quantity = values[:quantity]
+      order_item.price = values[:price]
+      if order_item.valid?
+        order_item.save
       else
-        format.html { render action: "edit" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        redirect_to order_path(order.id), :error => 'No se pudo cerrar la cuenta'
       end
     end
+    order.discount = params[:order][:discount]
+    order.total -= order.discount
+    order.close_at = Time.now
+    if order.save
+      redirect_to receipt_order_path(order.id), :layout => nil
+    else
+      redirect_to order_path(order.id), :error => 'No se pudo cerrar la cuenta'
+    end
+  end
+
+  def receipt
+    @order = Order.find params[:id]
+    @order_items = @order.order_items
+    render :layout => "checkout"
+
   end
 
   # DELETE /orders/1

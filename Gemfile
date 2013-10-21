@@ -38,4 +38,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+# gem 'dev'
+group :development, :test do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'awesome_print'
+  gem 'binding_of_caller'
+  gem 'rspec-rails', '~> 2.0'
+end

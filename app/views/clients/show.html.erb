@@ -14,14 +14,11 @@
   <dd><%= @client.zip_code %></dd>
 </dl>
 
-<div class="form-actions">
+<div class="form-actions" style="background: inherit">
+  <%= link_to 'Pedido', new_client_order_path(@client.id), :class => 'btn'%>
   <%= link_to t('.back', :default => t("helpers.links.back")),
               clients_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_client_path(@client), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              client_path(@client),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+
 </div>

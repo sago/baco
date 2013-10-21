@@ -1,0 +1,59 @@
+<table class="table table-striped order-items">
+  <col class="qty-column">
+  <col class="name-column">
+  <col class="price-column">
+
+  <thead>
+  <tr>
+    <th><%= 'Cant.' %></th>
+    <th><%= 'Producto' %></th>
+    <th><%= 'Precio' %></th>
+    <th><%=	'Subtotal' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @order_items.each do |order_item| %>
+      <tr>
+        <td class="td-numeric"><%= order_item.quantity %></td>
+        <td><%= order_item.product.name %></td>
+        <td class="td-numeric"><%= order_item.price %></td>
+        <td class="td-numeric"><%= order_item.price * order_item.quantity %></td>
+      </tr>
+  <% end %>
+
+  <% unless @order.close_at %>
+      <tr>
+        <%= form_for @order_item, :url => add_order_item_path do |f| %>
+            <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
+            <%= hidden_field_tag 'order_id', @order.id %>
+            <td class="td-numeric">
+              <%= f.text_field :quantity, :class => 'text_field prod-qty' %>
+            </td>
+            <td>
+              <%= text_field_tag 'product_name', nil, :class => 'text_field prod-name' %>
+              <%= f.submit '+', :class => 'btn-small btn-primary btn-success prod-submit' %>
+            </td>
+            <td></td>
+            <td></td>
+        <% end %>
+      </tr>
+  <% end %>
+
+  <% if @order.discount.to_f > 0  %>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Descuento</td>
+        <td class="td-numeric"><%= @order.discount %></td>
+      </tr>
+  <% end %>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><b>Total</b></td>
+    <td class="td-numeric"><b><%= @order.total %></b></td>
+  </tr>
+  </tbody>
+</table>
+</br>

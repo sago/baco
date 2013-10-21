@@ -1,0 +1,9 @@
+<%= render :partial => '/shared/order_info' %>
+
+<div class="form-actions">
+  <% if @order.close_at && @order_items.present? %>
+      <a href="#" onclick="window.print();return false;">Imprimir</a>
+      <%= link_to 'Regresar', orders_path,
+                  :class => 'btn-large btn-warning'%>
+  <% end %>
+</div>
