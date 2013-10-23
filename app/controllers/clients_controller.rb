@@ -4,10 +4,6 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @clients }
-    end
   end
 
   # GET /clients/1
@@ -15,10 +11,6 @@ class ClientsController < ApplicationController
   def show
     @client = Client.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @client }
-    end
   end
 
   # GET /clients/new
@@ -26,10 +18,6 @@ class ClientsController < ApplicationController
   def new
     @client = Client.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @client }
-    end
   end
 
   # GET /clients/1/edit
@@ -42,12 +30,16 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(params[:client])
     respond_to do |format|
-      if @client.save
-        format.html { redirect_to @client, notice: 'El cliente se ha creado correctamente.' }
-        format.json { render json: @client, status: :created, location: @client }
+      if @client.valid?
+        if @client.save
+          format.html { redirect_to @client, :notice => 'El cliente se ha creado correctamente.' }
+        else
+          puts 'Algo'
+          format.html { render :action => "new", :notice => 'Favor de checar los campos en rojo.' }
+        end
       else
-        format.html { render action: "new" }
-        format.json { render json: @client.errors, status: :unprocessable_entity }
+        format.html { render :action => "new", :notice => 'Favor de checar los campos en rojo.' }
+
       end
     end
   end
@@ -59,11 +51,11 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.update_attributes(params[:client])
-        format.html { redirect_to @client, notice: 'El cliente se ha actualizado correctamente.' }
+        format.html { redirect_to @client, :notice => 'El cliente se ha actualizado correctamente.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @client.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @client.errors, :status => :unprocessable_entity }
       end
     end
   end

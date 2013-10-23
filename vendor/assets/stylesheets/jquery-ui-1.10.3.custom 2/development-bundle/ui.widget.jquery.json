@@ -1,13 +1,13 @@
 {
 	"name": "ui.widget",
 	"title": "jQuery UI Widget",
-	"description": "Provides a factory for creating stateful widgets with a common API.",
+	"description": "Provides a factories for creating stateful widgets with a common API.",
 	"keywords": [
 		"ui",
 		"widget",
 		"abstraction",
 		"state",
-		"factory"
+		"factories"
 	],
 	"version": "1.10.3",
 	"author": {

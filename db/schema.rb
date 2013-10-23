@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(:version => 20131016161116) do
 
   create_table "orders", :force => true do |t|
     t.integer  "client_id"
-    t.decimal  "discount"
+    t.decimal  "discount",   :default => 0.0
     t.datetime "close_at"
     t.decimal  "total"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "products", :force => true do |t|

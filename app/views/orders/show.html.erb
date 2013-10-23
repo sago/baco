@@ -37,19 +37,27 @@
   <% end %>
 
   <tr>
-    <%= form_for @order_item, :url => add_order_item_path do |f| %>
-        <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
-        <%= hidden_field_tag 'order_id', @order.id %>
-        <td class="td-numeric">
-          <%= f.text_field :quantity, :class => 'text_field prod-qty' %>
-        </td>
-        binding.pry
+    <% if @order.close_at.nil? %>
+        <%= form_for @order_item, :url => add_order_item_path do |f| %>
+            <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
+            <%= hidden_field_tag 'order_id', @order.id %>
+            <td class="td-numeric">
+                <%= f.text_field :quantity, :class => 'text_field prod-qty' %>
+            </td>
+            <td>
+                <%= text_field_tag 'product_name', nil, :class => 'text_field prod-name' %>
+                <%= f.submit '+', :class => 'btn-small btn-primary btn-success prod-submit' %>
+            </td>
+            <td></td>
+            <td></td>
+        <% end %>
+    <% else %>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td>
-          <%= text_field_tag 'product_name', nil, :class => 'text_field prod-name' %>
-          <%= f.submit '+', :class => 'btn-small btn-primary btn-success prod-submit' %>
+            <%= "Descuento:" %>
         </td>
-        <td></td>
-        <td></td>
+        <td><%= "#{@order.discount} %" %></td>
     <% end %>
   </tr>
 
@@ -65,15 +73,17 @@
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               orders_path, :class => 'btn'  %>
-  <% if @order_items.present? && @order.close_at.nil? %>
+  <% if @order_items.present? && (@order.close_at.nil? || @order.discount == 0) %>
       <%= link_to 'Cerrar Cuenta',
                   checkout_order_path(@order.id),
                   :data => { :confirm => 'Seguro que quiere cerrar la cuenta?' },
                   :class => 'btn btn-info'%>
   <% end %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <% if @order.close_at.nil?  %>
+      <%= link_to t('Cancelar Cuenta'),
               order_path(@order),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+  <% end %>
 </div>

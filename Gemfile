@@ -45,4 +45,5 @@ group :development, :test do
   gem 'awesome_print'
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
 end

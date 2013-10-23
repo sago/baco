@@ -3,6 +3,10 @@ class Client < ActiveRecord::Base
   attr_accessible :address, :name, :phone, :rfc, :zip_code
 
   #Validations
-  #validates_presence_of (:name, :address, :phone, :rfc, :zip_code)
+  validates :name, :presence => true
+  validates :address, :presence => true
+  validates :phone, :presence => true
+  validates :rfc, :presence => true
+  validates :zip_code, :presence => true
 
 end
