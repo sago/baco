@@ -73,7 +73,7 @@
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               orders_path, :class => 'btn'  %>
-  <% if @order_items.present? && (@order.close_at.nil? || @order.discount == 0) %>
+  <% if @order_items.present? && (@order.close_at.nil? && @order.discount == 0) %>
       <%= link_to 'Cerrar Cuenta',
                   checkout_order_path(@order.id),
                   :data => { :confirm => 'Seguro que quiere cerrar la cuenta?' },
@@ -81,9 +81,8 @@
   <% end %>
   <% if @order.close_at.nil?  %>
       <%= link_to t('Cancelar Cuenta'),
-              order_path(@order),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              cancel_order_path(@order.id),
+              :data => { :confirm => "Seguro que desea cancelar la cuenta ?" },
               :class => 'btn btn-danger' %>
   <% end %>
 </div>

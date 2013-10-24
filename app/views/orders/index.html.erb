@@ -25,6 +25,7 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_order_path,
+<%= link_to t("Abrir Pedido nuevo"),
+            clients_path,
+            :data => { :confirm => "Desea abrir un pedido? Primero seleccione el cliente."},
             :class => 'btn btn-primary' %>

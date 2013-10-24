@@ -79,6 +79,15 @@ class OrdersController < ApplicationController
     render :layout => "checkout"
   end
 
+  def cancel
+    order = Order.find params[:id]
+    if order.order_items.present?
+      redirect_to order_path(order.id), :notice => 'No se puede cancelar la cuenta; tiene elementos'
+    else
+      order.destroy
+      redirect_to orders_path, :notice => 'Cuenta cancelada'
+    end
+  end
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
