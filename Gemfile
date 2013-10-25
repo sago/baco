@@ -50,4 +50,4 @@ group :development, :test do
 end
 
 # gem production
-gem 'rails_12factor', :group => :production
+#gem 'rails_12factor', :group => :production

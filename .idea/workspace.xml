@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51e020a0-2a2b-4727-91d5-65996fe0f2d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/carousel/backround.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/clients/index.html.erb" afterPath="$PROJECT_DIR$/app/views/clients/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/suppliers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/suppliers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/clients/show.html.erb" afterPath="$PROJECT_DIR$/app/views/clients/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baco_b.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375715286716" ignored="false" />
-    <file path="/Gemfile" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382711474344" ignored="false" />
+    <file path="/Gemfile" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382717464603" ignored="false" />
     <file path="/seeds.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375736807121" ignored="false" />
     <file path="/routes.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382656950366" ignored="false" />
     <file path="/application.css" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375716723610" ignored="false" />
@@ -145,7 +131,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="463" selection-end="463" vertical-scroll-proportion="0.39800996">
+            <state line="52" column="1" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.8507463">
               <folding />
             </state>
           </provider>
@@ -952,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="463" selection-end="463" vertical-scroll-proportion="0.39800996">
+        <state line="52" column="1" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.8507463">
           <folding />
         </state>
       </provider>
