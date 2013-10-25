@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51e020a0-2a2b-4727-91d5-65996fe0f2d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="baco_b.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +13,7 @@
     <file path="/application.css" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375716723610" ignored="false" />
     <file path="/index.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382587480297" ignored="false" />
     <file path="/products.js.coffee" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375716052913" ignored="false" />
-    <file path="/application.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382660197075" ignored="false" />
+    <file path="/application.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382731708214" ignored="false" />
     <file path="/20130805170213_create_clients.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375722970464" ignored="false" />
     <file path="/edit.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1375724069460" ignored="false" />
     <file path="/clients_controller.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382404165164" ignored="false" />
@@ -74,10 +74,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="51" selection-start="2915" selection-end="2915" vertical-scroll-proportion="0.0">
+            <state line="22" column="4" selection-start="986" selection-end="986" vertical-scroll-proportion="0.3975265">
               <folding />
             </state>
           </provider>
@@ -128,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.8507463">
+            <state line="52" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,10 +194,10 @@
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -915,13 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="51" selection-start="2915" selection-end="2915" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="25" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
@@ -938,7 +931,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.8507463">
+        <state line="52" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="4" selection-start="986" selection-end="986" vertical-scroll-proportion="0.3975265">
           <folding />
         </state>
       </provider>
