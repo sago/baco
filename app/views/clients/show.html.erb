@@ -15,7 +15,7 @@
 </dl>
 
 <div class="form-actions" style="background: inherit">
-  <%= link_to 'Pedido', new_client_order_path(@client.id), :class => 'btn'%>
+  <%= link_to 'Pedido', new_client_order_path(@client.id), :class => 'btn  btn-success'%>
   <%= link_to t('.back', :default => t("helpers.links.back")),
               clients_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),

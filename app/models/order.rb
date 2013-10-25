@@ -7,7 +7,6 @@ class Order < ActiveRecord::Base
   #Validations
   validates_associated :order_items
 
-
   def update_total
     total = 0
     order_items.each { |ai| total += (ai.price * ai.quantity) }
