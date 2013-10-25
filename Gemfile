@@ -47,6 +47,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails'
+  gem 'rails_12factor'
 end
 
 # gem production
