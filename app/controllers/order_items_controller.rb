@@ -26,4 +26,10 @@ class OrderItemsController < ApplicationController
     list = product_list.map { |p| Hash[:value => p.name, :label => p.name, :price => p.price, :id => p.id] }
     render :json => list
   end
+  def destroy
+    @order_item = OrderItem.find(params[:id])
+    order_id = @order_item.order_id
+    @order_item.destroy
+    redirect_to order_path(order_id), :notice => 'Elemento eliminado'
+  end
 end

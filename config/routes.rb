@@ -30,6 +30,7 @@ BacoB::Application.routes.draw do
   # Order Items to Orders
   post 'order_items/create' => 'order_items#create', :as => 'add_order_item'
   get 'order_items/search_products' => 'order_items#search_products'
+  resources :order_items, :only => [:destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

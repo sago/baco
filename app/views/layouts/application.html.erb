@@ -56,10 +56,10 @@
             <form class="navbar-form pull-right" style="padding-top: 15px">
               <ul class="breadcrumb">
                 <% if current_user %>
-                    Sesión como <%= current_user.email %>.
+                    Sesión como| <%= current_user.email %> |
                     <li><%= link_to "Salir", log_out_path %></li>
                 <% else %>
-                    <li><%= link_to "Iniciar Sesión", log_in_path %><span class="divider"> |</span></li>
+                    <li><%= link_to "Iniciar Sesión", log_in_path %><span class="divider"></span></li>
                     <!-- <li>%= link_to "Sign up", sign_up_path %></li> -->
                 <% end %>
               </ul>
