@@ -1,5 +1,5 @@
 <div class="dl-horizontal">
-  <h3>Cliente</h3>
+  <h4>Cliente</h4>
 </div>
 <dl class="dl-horizontal">
   <dt><strong>Nombre:</strong></dt>
@@ -16,9 +16,9 @@
 
 <div class="form-actions" style="background: inherit">
   <%= link_to 'Pedido', new_client_order_path(@client.id), :class => 'btn  btn-success'%>
-  <%= link_to t('.back', :default => t("helpers.links.back")),
+  <%= link_to 'Regresar',
               clients_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_client_path(@client), :class => 'btn' %>
+  <%= link_to 'Editar',
+              edit_client_path(@client), :class => 'btn btn-primary' %>
 
 </div>

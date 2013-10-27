@@ -31,8 +31,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                clients_path, :class => 'btn' %>
+    <%= f.submit 'Guardar', :class => 'btn btn-primary' %>
+    <%= link_to 'Cancelar',
+                clients_path, :class => 'btn btn-danger' %>
   </div>
 <% end %>
