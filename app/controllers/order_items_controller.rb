@@ -3,7 +3,7 @@ class OrderItemsController < ApplicationController
     product = Product.find params[:order_item][:product_id]
 
     order_item = OrderItem.find_or_create_by_order_id_and_product_id(params[:order_id], product.id, :quantity => params[:order_item][:quantity], :price => product.price)
-    quantity = ((order_item.quantity).to_i  || 0)
+    quantity = params[:order_item][:quantity].to_i + (order_item.quantity || 0)
     order_item.quantity = quantity
     order_item.price = product.price
     order_item.save
@@ -26,10 +26,12 @@ class OrderItemsController < ApplicationController
     list = product_list.map { |p| Hash[:value => p.name, :label => p.name, :price => p.price, :id => p.id] }
     render :json => list
   end
+
   def destroy
     @order_item = OrderItem.find(params[:id])
     order_id = @order_item.order_id
     @order_item.destroy
+    @order_item.save
     redirect_to order_path(order_id), :notice => 'Elemento eliminado'
   end
 end
