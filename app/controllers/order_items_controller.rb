@@ -2,7 +2,7 @@ class OrderItemsController < ApplicationController
   def create
     product = Product.find params[:order_item][:product_id]
 
-    order_item = OrderItem.find_or_create_by_order_id_and_product_id(params[:order_id], product.id, :quantity => params[:order_item][:quantity], :price => product.price)
+    order_item = OrderItem.find_or_create_by_order_id_and_product_id(params[:order_id], product.id, :price => product.price)
     quantity = params[:order_item][:quantity].to_i + (order_item.quantity || 0)
     order_item.quantity = quantity
     order_item.price = product.price
