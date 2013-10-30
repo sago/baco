@@ -36,6 +36,7 @@
         <td class="td-numeric"><%= order_item.price * order_item.quantity %></td>
         <td><%= link_to 'Quitar', order_item_path(order_item, params[order_item.order_id]),
                         :method => 'delete',
+                        :confirm => 'Seguro que desea quitar el elemento?',
                         :class => 'btn btn-danger' %></td>
       </tr>
   <% end %>
