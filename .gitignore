@@ -7,8 +7,6 @@
 
 # Ignore test
 /test
-/spec
-.rspec
 
 # Ignore bundler config
 /.bundle
