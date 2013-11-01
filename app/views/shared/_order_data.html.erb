@@ -1,0 +1,50 @@
+
+<% @order_items.each do |order_item| %>
+    <tr>
+      <td class="td-numeric"><%= order_item.quantity %></td>
+      <td><%= order_item.product.name %></td>
+      <td class="td-numeric"><%= order_item.price %></td>
+      <td class="td-numeric"><%= order_item.price * order_item.quantity %></td>
+      <% if @order.close_at.nil? %>
+          <td><%= link_to 'Quitar', order_item_path(order_item.id),
+                          :id => 'remove-item',
+                          :remote => true,
+                          :method => 'delete',
+                          :confirm => 'Seguro que desea quitar el elemento?',
+                          :class => 'btn btn-danger' %>
+          </td>
+      <% end %>
+    </tr>
+<% end %>
+
+<tr>
+  <% if @order.close_at.nil? %>
+      <%= form_for @order_item, :url => add_order_item_path do |f| %>
+          <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
+          <%= hidden_field_tag 'order_id', @order.id %>
+          <td class="td-numeric">
+            <%= f.text_field :quantity, :class => 'text_field prod-qty' %>
+          </td>
+          <td>
+            <%= text_field_tag 'product_name', nil, :class => 'text_field prod-name' %>
+            <%= f.submit '+', :class => 'btn-small btn-primary btn-success prod-submit' %>
+          </td>
+          <td></td>
+          <td></td>
+      <% end %>
+  <% else %>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>
+        <%= "Descuento:" %>
+      </td>
+      <td><%= "#{@order.discount} %" %></td>
+  <% end %>
+</tr>
+
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>Total</td>
+  <td class="td-numeric"><%= @order.total %></td>
+</tr>

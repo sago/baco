@@ -31,6 +31,15 @@ class OrderItemsController < ApplicationController
     @order_item = OrderItem.find(params[:id])
     order_id = @order_item.order_id
     @order_item.destroy
-    redirect_to order_path(order_id), :notice => 'Elemento eliminado'
+
+    respond_to do |format|
+      format.html { redirect_to order_path(order_id), :notice => 'Elemento eliminado' }
+      format.js do
+        @order = Order.find order_id
+        @order_items = @order.order_items.all
+        @order_item = OrderItem.new
+      end
+    end
+
   end
 end
