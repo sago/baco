@@ -19,7 +19,7 @@
 
 <tr>
   <% if @order.close_at.nil? %>
-      <%= form_for @order_item, :url => add_order_item_path do |f| %>
+      <%= form_for @order_item, :url => add_order_item_path, :remote => true, :method => 'post' do |f| %>
           <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
           <%= hidden_field_tag 'order_id', @order.id %>
           <td class="td-numeric">
@@ -27,7 +27,7 @@
           </td>
           <td>
             <%= text_field_tag 'product_name', nil, :class => 'text_field prod-name' %>
-            <%= f.submit '+', :class => 'btn-small btn-primary btn-success prod-submit' %>
+            <%= f.submit '+', :class => 'btn btn-small btn-primary btn-success prod-submit' %>
           </td>
           <td></td>
           <td></td>
@@ -48,3 +48,7 @@
   <td>Total</td>
   <td class="td-numeric"><%= @order.total %></td>
 </tr>
+
+<script type="text/javascript">
+        ps();
+</script>

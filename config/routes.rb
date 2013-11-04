@@ -11,7 +11,7 @@ BacoB::Application.routes.draw do
   #Welcome page
   get "home/index"
 
-  #Manage Sistem
+  #Mannage System
   resources :orders, :except => [:create] do
     member do
       get 'checkout'

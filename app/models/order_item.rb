@@ -3,6 +3,7 @@ class OrderItem < ActiveRecord::Base
   belongs_to :product
   attr_accessible :order_id, :price, :product_id, :quantity
   after_save :update_order_total
+  after_destroy :update_order_total
 
   #Validations
   validates :quantity, :numericality => true

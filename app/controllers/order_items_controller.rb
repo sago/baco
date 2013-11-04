@@ -1,19 +1,25 @@
 class OrderItemsController < ApplicationController
+  skip_before_filter :require_login
+
   def create
     product = Product.find params[:order_item][:product_id]
-
     order_item = OrderItem.find_or_create_by_order_id_and_product_id(params[:order_id], product.id, :price => product.price)
     quantity = params[:order_item][:quantity].to_i + (order_item.quantity || 0)
     order_item.quantity = quantity
     order_item.price = product.price
-    order_item.save
     if order_item.save
       notice = 'Cuenta actualizada'
     else
       notice = 'No se pudo agregar'
     end
-
-    redirect_to order_path(params[:order_id]), :notice => notice
+      respond_to do |format|
+      format.js do
+        @order = Order.find order_item.order_id
+        @order_items = @order.order_items.all
+        @order_item = OrderItem.new
+      end
+    end
+    #redirect_to order_path(params[:order_id]), :notice => notice
 
   end
 
