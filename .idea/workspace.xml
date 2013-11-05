@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51e020a0-2a2b-4727-91d5-65996fe0f2d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/order_items/create.js.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_order_data.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_order_data.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order_item.rb" afterPath="$PROJECT_DIR$/app/models/order_item.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/order_items.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/order_items.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baco_b.iws" />
@@ -65,7 +60,7 @@
     <file path="/products_controller.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1382994329154" ignored="false" />
     <file path="/destroy.js.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1383335335555" ignored="false" />
     <file path="/_order_data.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1383578910455" ignored="false" />
-    <file path="/order_items.js.coffee" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1383578947865" ignored="false" />
+    <file path="/order_items.js.coffee" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1383680330848" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +83,7 @@
       <file leaf-file-name="order_items_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/order_items_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="73" selection-start="897" selection-end="930" vertical-scroll-proportion="0.0">
+            <state line="27" column="39" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,7 +110,7 @@
       <file leaf-file-name="order_items.js.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/order_items.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="434" selection-end="434" vertical-scroll-proportion="0.33913043">
+            <state line="17" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.44347826">
               <folding />
             </state>
           </provider>
@@ -142,7 +137,7 @@
       <file leaf-file-name="_order_data.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_order_data.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="12" selection-start="1738" selection-end="1738" vertical-scroll-proportion="-20.458334">
+            <state line="28" column="26" selection-start="1152" selection-end="1240" vertical-scroll-proportion="-17.5">
               <folding />
             </state>
           </provider>
@@ -885,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="944" selection-end="944" vertical-scroll-proportion="-8.083333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/order_items/destroy.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="82" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
@@ -938,21 +926,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/order_items_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="73" selection-start="897" selection-end="930" vertical-scroll-proportion="0.0">
+        <state line="27" column="39" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_order_data.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="12" selection-start="1738" selection-end="1738" vertical-scroll-proportion="-20.458334">
+        <state line="28" column="26" selection-start="1152" selection-end="1240" vertical-scroll-proportion="-17.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="19" selection-start="944" selection-end="944" vertical-scroll-proportion="-8.083333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/order_items.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="434" selection-end="434" vertical-scroll-proportion="0.33913043">
+        <state line="17" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.44347826">
           <folding />
         </state>
       </provider>
