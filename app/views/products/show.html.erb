@@ -20,6 +20,10 @@
   <%= @product.unit_mesure %>
 </p>
 
+<p>
+  <b>Proveedor:</b>
+  <%= @product.supplier_id %>
+</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
