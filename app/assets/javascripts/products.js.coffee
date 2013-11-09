@@ -10,6 +10,5 @@ $(document).ready ->
   index = 1
   $('#supplier_name').autocomplete
     source: "/products/search_suppliers",
-    minLength: 2,
     select: (event, ui) ->
       $('#supplier_id').val(ui.item.id)

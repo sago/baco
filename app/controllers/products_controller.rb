@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
     end
     list = supplier_list.map { |s| Hash[:value => s.name, :label => s.name, :id => s.id] }
     render :json => list
+    #@product.supplier_id = Supplier.find(list.first[:id])
   end
 
   def index

@@ -68,6 +68,12 @@ class OrdersController < ApplicationController
     order.close_at = Time.now
     if order.save
       redirect_to receipt_order_path(order.id), :layout => nil
+      #aquí se debe de restar el quantity al inventario
+      #debe buscar el product.inventory
+      #@product = Product.where(order_item.product_id)
+      #@product.inventory -= order_item.quantity
+      #@product.save
+      #Se debe de validar primero si hay producto en el inventario antes del checkout
     else
       redirect_to order_path(order.id), :error => 'No se pudo cerrar la cuenta'
     end
