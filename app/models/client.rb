@@ -9,4 +9,12 @@ class Client < ActiveRecord::Base
   validates :rfc, :presence => true
   validates :zip_code, :presence => true
 
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
 end

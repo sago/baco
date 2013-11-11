@@ -24,7 +24,6 @@ class ProductsController < ApplicationController
     end
     list = supplier_list.map { |s| Hash[:value => s.name, :label => s.name, :id => s.id] }
     render :json => list
-    #@product.supplier_id = Supplier.find(list.first[:id])
   end
 
   def index
@@ -40,7 +39,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-
+    @supplier = Supplier.find(@product.supplier_id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
@@ -70,7 +69,6 @@ class ProductsController < ApplicationController
   # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
-
     respond_to do |format|
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, :notice => 'Product was successfully updated.' }

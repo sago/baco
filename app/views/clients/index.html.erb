@@ -1,4 +1,12 @@
 <h4>Clientes</h4>
+
+<%= form_tag clients_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Buscar", :name => nil, :class => 'btn btn-info' %>
+    </p>
+<% end %>
+
 <table class="table table-striped" style="background: gainsboro; line-height: 28px;">
   <thead>
     <tr>
@@ -11,17 +19,9 @@
     </tr>
   </thead>
   <tbody>
-    <% @clients.each do |client| %>
-      <tr>
-        <td><%= client.id %></td>
-        <td><%= link_to client.name, client_path(client)  %></td>
-        <td><%= client.address %></td>
-        <td><%= client.phone %></td>
-        <td><%= client.rfc %></td>
-        <td><%= client.zip_code %></td>
 
-      </tr>
-    <% end %>
+    <%= render :partial => 'shared/clients_table' %>
+
   </tbody>
 </table>
 
