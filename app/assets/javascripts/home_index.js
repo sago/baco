@@ -6,4 +6,5 @@ $(document).ready(function() {
     autoplay: true,
     autoplayDuration: 2000
   });
+  $('#slider-code').tinycarousel({ display: 2 });
 });
