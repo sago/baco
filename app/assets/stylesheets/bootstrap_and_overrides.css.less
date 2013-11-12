@@ -19,12 +19,25 @@ body { padding-top: 85px;
   color: #777777;
   text-decoration: none;
 }
+.navbar-inverse .navbar-inner {
+  background-image: linear-gradient(to bottom, #455486, #111111);
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:hover{
+  background-image: linear-gradient(to bottom, #4C557A, #211F38);
+}
 .form-actions {
   padding: 19px 20px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   background: inherit;
   border-top: 1px solid #e5e5e5;
+}
+.breadcrumb {
+  background-image: linear-gradient(to bottom, #A0A7C3, #7A7A88);
+  li{
+    display: inline-block;
+    text-shadow: 0 1px 0 #1F6891;
+  }
 }
 // ends bootstrap
 .title {
@@ -40,29 +53,50 @@ body { padding-top: 85px;
 .login{
   height: 390px;
   width: 290px;
-  background: darkgrey;
+  background: linear-gradient(to bottom, #818BAA, #5B5B7C);
   padding-left: 30px;
   padding-top: 20px;
+  border-radius: 14px;
 }
 .clientes{
   position: absolute;
   left: 930px;
   top: 100px;
+  font-size: 0;
+  :hover{
+    border-radius: 10px;
+    background-color: #18668D;
+  }
 }
 .productos{
   position: absolute;
   left: 1100px;
   top: 100px;
+  font-size: 0;
+  :hover{
+    border-radius: 10px;
+    background-color: #18668D;
+  }
 }
 .proveedores{
   position: absolute;
   left: 930px;
   top: 250px;
+  font-size: 0;
+  :hover{
+    border-radius: 10px;
+    background-color: #18668D;
+  }
 }
 .ventas{
   position: absolute;
   left: 1100px;
   top: 250px;
+  font-size: 0;
+  :hover{
+    border-radius: 10px;
+    background-color: #18668D;
+  }
 }
 
 //Carousel Style
