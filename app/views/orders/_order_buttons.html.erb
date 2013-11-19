@@ -1,0 +1,14 @@
+<%= link_to t('.back', :default => t("helpers.links.back")),
+            orders_path, :class => 'btn'  %>
+<% if @order_items.present? && (@order.close_at.nil? && @order.discount == 0) %>
+    <%= link_to 'Cerrar Cuenta',
+                checkout_order_path(@order.id),
+                :data => { :confirm => 'Seguro que quiere cerrar la cuenta?' },
+                :class => 'btn btn-info'%>
+<% end %>
+<% if @order.close_at.nil?  %>
+    <%= link_to t('Cancelar Cuenta'),
+                cancel_order_path(@order.id),
+                :data => { :confirm => "Seguro que desea cancelar la cuenta ?" },
+                :class => 'btn btn-danger' %>
+<% end %>
