@@ -24,7 +24,7 @@ BacoB::Application.routes.draw do
   resources :suppliers
 
   resources :clients do
-    resources :orders, :except => [:create]
+    resources :orders, :except => [:create, :index]
   end
 
   # Suppliers to Products

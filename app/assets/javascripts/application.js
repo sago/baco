@@ -17,4 +17,7 @@
 //= require dataTables/jquery.dataTables
 //= require jquery.roundabout
 //= require_tree .
-
+//$(document).on("click", "#clients_button", function() {
+//    $.get($("#clients_table").attr("action"), $("#clients_table").serialize(), null, "script");
+//    return false;
+//});

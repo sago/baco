@@ -1,6 +1,6 @@
 <h4>Clientes</h4>
 
-<%= form_tag clients_path, :method => 'get' do %>
+<%= form_tag clients_path, :method => 'get', :id => "clients_search" do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Buscar", :name => nil, :class => 'btn btn-info' %>
@@ -18,7 +18,7 @@
       <th>C.P.</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="clients_table">
 
     <%= render :partial => 'shared/clients_table' %>
 

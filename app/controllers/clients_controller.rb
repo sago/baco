@@ -1,9 +1,9 @@
 class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
+
   def index
     @clients = Client.search(params[:search])
-
   end
 
   # GET /clients/1
@@ -17,7 +17,6 @@ class ClientsController < ApplicationController
   # GET /clients/new.json
   def new
     @client = Client.new
-
   end
 
   # GET /clients/1/edit

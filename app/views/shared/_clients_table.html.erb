@@ -1,12 +1,12 @@
-<% @clients.each do |client| %>
-    <tr>
+  <% @clients.each do |client| %>
+      <tr>
 
-      <td><%= client.id %></td>
-      <td><%= link_to client.name, client_path(client)  %></td>
-      <td><%= client.address %></td>
-      <td><%= client.phone %></td>
-      <td><%= client.rfc %></td>
-      <td><%= client.zip_code %></td>
+        <td><%= client.id %></td>
+        <td><%= link_to client.name, client_path(client) %></td>
+        <td><%= client.address %></td>
+        <td><%= client.phone %></td>
+        <td><%= client.rfc %></td>
+        <td><%= client.zip_code %></td>
 
-    </tr>
-<% end %>
+      </tr>
+  <% end %>

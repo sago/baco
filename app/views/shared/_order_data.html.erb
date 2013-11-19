@@ -19,7 +19,7 @@
 
 <tr>
   <% if @order.close_at.nil? %>
-      <%= form_for @order_item, :url => add_order_item_path, :remote => true, :method => 'post' do |f| %>
+      <%= form_for @order_item, :url => add_order_item_path, :remote => true do |f| %>
           <%= f.hidden_field :product_id, :class => 'text_field', :id => 'product_id' %>
           <%= hidden_field_tag 'order_id', @order.id %>
           <td class="td-numeric">
