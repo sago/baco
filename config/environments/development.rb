@@ -34,4 +34,7 @@ BacoB::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Fixed the template error on checkout.css
+  config.assets.manifest = Rails.root.join("public/assets")
 end
