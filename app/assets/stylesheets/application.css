@@ -14,3 +14,8 @@
  *= require dataTables/src/demo_table_jui
  *= require_tree .
  */
+/*Factura*/
+.factura {
+    font-size: -webkit-xxx-large;
+    color: darkblue;
+}
