@@ -6,6 +6,7 @@ class Order < ActiveRecord::Base
 
   #Validations
   validates_associated :order_items
+  validates :folio_bill, :format => { :with => ['A']+/[0-9]/}
 
   def update_total
     total = 0
