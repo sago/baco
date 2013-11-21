@@ -1,9 +1,23 @@
+<div>
+  <img src="/assets/logo_baco.jpg" class="logo">
+</div>
+
+<span class="factura">Básicos de Colima</span></br></br>
+<p class="data_table">Folio:  <%= "#FolioModulo" %><span class="date">Fecha: <%= Date.current %></span></p></br>
+<p class="data_table">
+  Saúl Felipe Gómez Pérez</br>
+  Direcc.   Pico de Neblina 1111, Col. Nuevo Milenio, C.P. 28048 </br>
+  RFC       GOPS820118731</br>
+</p></br></br>
+
 <%= render :partial => '/shared/order_info' %>
 
 <div class="form-actions">
+  </br></br>
+  <img src="/assets/bar_code.png" class="data_table"></br></br>
   <% if @order.close_at && @order_items.present? %>
-      <a href="#" onclick="window.print();return false;">Imprimir</a>
-      <%= link_to 'Regresar', orders_path,
+
+      <%= link_to "Básicos de Colima", orders_path,
                   :class => 'btn-large btn-warning'%>
   <% end %>
 </div>

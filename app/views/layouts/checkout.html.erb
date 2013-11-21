@@ -12,19 +12,13 @@
 
 </head>
 <body onload="window.print();">
-<img src="">
-<p>
-  <%= Date.current %></br>
-  Saúl Felipe Gómez Pérez</br>
-  Pico de Neblina 1111, Col. Nuevo Milenio, C.P. 28048 </br>
-  GOPS820118731</p>
-
-<%= yield %>
-
-<img src="">
-<%= javascript_include_tag "checkout" %>
 
 
+<div class="data_table">
+    <%= yield %>
+</div>
+
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>
