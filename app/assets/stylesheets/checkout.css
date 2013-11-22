@@ -1,13 +1,15 @@
 .factura {
     font-size: xx-large;
     color: darkblue;
-    padding: 0px 199px;
+    position: fixed;
+    padding-top: 20px;
 }
 .logo {
-    padding: 0px 166px 1px;
+    padding: 0px 10px 1px;
 }
 .data_table{
     padding-left: 35px;
+    font-size: smaller;
 }
 .date{
     padding-left: 300px;
