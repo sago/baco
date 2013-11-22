@@ -3,7 +3,7 @@
 <%= form_tag clients_path, :method => 'get', :id => "clients_search" do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Buscar", :name => nil, :class => 'btn btn-info' %>
+      <%= submit_tag "Buscar", :name => nil, :class => 'btn btn-search btn-info' %>
     </p>
 <% end %>
 
