@@ -1,6 +1,6 @@
-<table class="table table-striped order-items">
+<table class="table table-striped order-items data_table" style="text-align: right;">
   <col class="qty-column">
-  <col class="name-column">
+  <col class="name-column" style="text-align: center">
   <col class="price-column">
 
   <thead>
@@ -15,9 +15,9 @@
   <% @order_items.each do |order_item| %>
       <tr>
         <td class="td-numeric"><%= order_item.quantity %></td>
-        <td><%= order_item.product.name %></td>
-        <td class="td-numeric"><%= order_item.price %></td>
-        <td class="td-numeric"><%= order_item.price * order_item.quantity %></td>
+        <td class="name-column" style="width: 250px"><%= order_item.product.name %></td>
+        <td class="td-numeric" style="width: 100px;"><%= order_item.price %></td>
+        <td class="td-numeric" style="width: 100px;"><%= order_item.price * order_item.quantity %></td>
       </tr>
   <% end %>
 
@@ -51,8 +51,8 @@
   <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td><b>Total</b></td>
-    <td class="td-numeric"><b><%= @order.total %></b></td>
+    <td></br></br><b>Total</b></td>
+    <td class="td-numeric"></br></br><b><%= @order.total %></b></td>
   </tr>
   </tbody>
 </table>

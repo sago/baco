@@ -1,3 +1,56 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Table form style
+.order-items {
+  width: 660px;
+  max-width: 660px;
+}
+.qty-column, .price-column {
+  width: 100px;
+}
+
+.name-column-receipt {
+  width: 200px;
+  max-width: 400px;
+}
+.name-column {
+  max-width: 400px;
+}
+td.td-numeric {
+  text-align: right;
+  padding-right: 25px;
+  background-color: #dddddd;
+}
+.prod-qty {
+  width: 55px;
+}
+
+.prod-name {
+  width: 155px;
+}
+
+.prod-submit {
+  margin-top: -10px;
+}
+.checkout {
+  width: 600px;
+  input {
+    display: block;
+    float: right;
+  }
+}
+.dl-horizontal{
+  color: #ffffff;
+}
+// Autocomplete widget
+.ui-widget {
+  font-family: Verdana,Arial,sans-serif/*{ffDefault}*/;
+  font-size: 1.1em/*{fsDefault}*/;
+  width: 400px;
+}
+//Factura
+.factura {
+  font-size: -webkit-xxx-large;
+  color: darkblue;
+}
