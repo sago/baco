@@ -45,13 +45,18 @@
         <td> Descuento: </td>
         <td class="td-numeric"><%= f.text_field :discount, :class => 'text_field prod-qty' %></td>
       </tr>
-
+      <tr class="td-numeric">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td></br>IVA</td>
+        <td></br><%= @order.total * 0.16 %></td>
+      </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
 
         <td>Total</td>
-        <td class="td-numeric"><%= @order.total %></td>
+        <td class="td-numeric"><%= @order.total * 1.16 %></td>
       </tr>
       </tbody>
     </table>
