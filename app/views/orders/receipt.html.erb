@@ -1,23 +1,34 @@
 <div>
-  <img src="/assets/logo_baco.jpg" class="logo">
+  <img src="/assets/logo_baco.jpg">
+  <span class="factura">Básicos de Colima</span>
 </div>
-
-<span class="factura">Básicos de Colima</span></br></br>
-<p class="data_table">Folio:  <%= "#FolioModulo" %><span class="date">Fecha: <%= Date.current %></span></p></br>
-<p class="data_table">
-  Saúl Felipe Gómez Pérez</br>
-  Direcc.   Pico de Neblina 1111, Col. Nuevo Milenio, C.P. 28048 </br>
-  RFC       GOPS820118731</br>
-</p></br></br>
+<p class="data_table">Folio:  <%= "#FolioModulo" %><span class="date">Fecha: <%= Date.current %></span></p>
+<p class="rfc_font">
+  <b>RFC GOPS820118731</b>
+</p>
+<p class="data_receptor">RFC Receptor:</br>
+  <b><%= @order.client.rfc %></b></br>
+  <%= @order.client.name %></br>
+  <%= @order.client.address %>
+  <%= @order.client.zip_code %>
+</p>
 
 <%= render :partial => '/shared/order_info' %>
 
 <div class="form-actions">
   </br></br>
-  <img src="/assets/bar_code.png" class="data_table"></br></br>
+  <img src="/assets/bar_code.png" class="data_table">
+  <span class="small_letters">
+    Número de aprobación SICOFI: <%= "Numero autorización SECOFI" %></br>
+    La reproducción apócrifa de este comprobante constituye un delito en
+    los términos de las disposiciones fiscales.</br>
+    Este comprobante tendrá una vigencia de dos años contados a partir de
+    la fecha de aprobación de la asignación de folios, la cual es: <%= "Fecha de caducidad" %></br>
+  </span></br>
+
   <% if @order.close_at && @order_items.present? %>
 
       <%= link_to "Básicos de Colima", orders_path,
-                  :class => 'btn-large btn-warning'%>
+                  :class => 'btn-large btn-warning' %>
   <% end %>
 </div>

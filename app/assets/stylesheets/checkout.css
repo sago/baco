@@ -1,13 +1,28 @@
 .factura {
     font-size: xx-large;
     color: darkblue;
-    padding: 0px 199px;
-}
-.logo {
-    padding: 0px 166px 1px;
+    position: absolute;
+    padding: 45px 25px;
 }
 .data_table{
     padding-left: 35px;
+}
+.rfc_font{
+    font-size: larger;
+    padding-left: 35px;
+
+}
+.data_receptor{
+    padding-left: 35px;
+    background-color: rgb(197, 199, 216);
+    width: 555px;
+}
+.small_letters{
+    font-size: smaller;
+    text-align: justify;
+    position: absolute;
+    padding: 10px;
+    width: 370px;
 }
 .date{
     padding-left: 300px;
