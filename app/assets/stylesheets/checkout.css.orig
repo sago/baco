@@ -1,11 +1,20 @@
 .factura {
     font-size: xx-large;
     color: darkblue;
+<<<<<<< HEAD
+    position: fixed;
+    padding-top: 20px;
+}
+.logo {
+    padding: 0px 10px 1px;
+=======
     position: absolute;
     padding: 45px 25px;
+>>>>>>> WIP Customize Bill
 }
 .data_table{
     padding-left: 35px;
+    font-size: smaller;
 }
 .rfc_font{
     font-size: larger;
