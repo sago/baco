@@ -47,7 +47,6 @@ class OrdersController < ApplicationController
     @order = Order.find params[:id]
     @order_items = @order.order_items
     @client = Client.find(@order.client_id)
-    binding.pry
   end
 
   def close
@@ -67,8 +66,10 @@ class OrdersController < ApplicationController
     disc = ((order.discount).to_f/100).* order.total
     order.total -= disc
     order.close_at = Time.now
+    @factura = params[:bill_check]
     if order.save
-      redirect_to receipt_order_path(order.id), :layout => nil
+      redirect_to receipt_order_path(order.id, :factura => @factura), :layout => nil
+
       #aquí se debe de restar el quantity al inventario
       #debe buscar el product.inventory
       #@product = Product.where(order_item.product_id)
@@ -83,6 +84,17 @@ class OrdersController < ApplicationController
   def receipt
     @order = Order.find params[:id]
     @order_items = @order.order_items
+    binding.pry
+    if params[:factura] == '1'
+      render :layout => "checkout"
+    else
+      redirect_to simplebill_order_path(@order, @order.order_items)
+    end
+  end
+
+  def simplebill
+    @order = Order.find params[:id]
+    @order_items = @order.order_items
     render :layout => "checkout"
   end
 
@@ -95,6 +107,7 @@ class OrdersController < ApplicationController
       redirect_to orders_path, :notice => 'Cuenta cancelada'
     end
   end
+
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy

@@ -1,0 +1,26 @@
+<div>
+  <span class="factura">Básicos de Colima</span>
+  <p>
+    </br><b>Nota de Venta</b>
+  </p>
+</div>
+
+<span class="date">Fecha: <%= Date.current %></span>
+<p class="data_receptor">Cliente</br>
+  <b><%= @order.client.rfc %></b></br>
+  <%= @order.client.name %></br>
+  <%= @order.client.address %>
+  <%= @order.client.zip_code %>
+</p>
+
+<%= render :partial => '/shared/order_info' %>
+
+<div class="form-actions">
+  </br></br>
+
+  <% if @order.close_at && @order_items.present? %>
+
+      <%= link_to "Básicos de Colima", orders_path,
+                  :class => 'btn-large btn-warning' %>
+  <% end %>
+</div>

@@ -18,6 +18,7 @@ BacoB::Application.routes.draw do
       post 'close'
       get 'receipt'
       get 'cancel'
+      get 'simplebill'
     end
   end
   # Suppliers to Products
