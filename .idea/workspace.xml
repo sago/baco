@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51e020a0-2a2b-4727-91d5-65996fe0f2d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/checkout.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/checkout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/checkout.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/checkout.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/receipt.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/receipt.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baco_b.iws" />
@@ -27,7 +24,7 @@
     <file path="/temp.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1384713840500" ignored="false" />
     <file path="$PROJECT_DIR$/../rubywarrior/ing-beginner/player.rb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1376280173754" ignored="false" />
     <file path="$PROJECT_DIR$/../rubywarrior/ing-beginner/README" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1376276841311" ignored="false" />
-    <file path="/Dummy.txt" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1385476818656" ignored="false" />
+    <file path="/Dummy.txt" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1385685315321" ignored="false" />
     <file path="$PROJECT_DIR$/../gusteau/Gemfile" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1376316305712" ignored="false" />
     <file path="$PROJECT_DIR$/../gusteau/config/database.yml" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1376316534843" ignored="false" />
     <file path="$PROJECT_DIR$/../gusteau/app/views/orders/index.html.erb" changelist="51e020a0-2a2b-4727-91d5-65996fe0f2d9" time="1376318393701" ignored="false" />
@@ -101,19 +98,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_order_info.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_order_info.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="51" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkout.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/checkout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="20" selection-start="345" selection-end="345" vertical-scroll-proportion="0.49751243">
+            <state line="20" column="20" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,7 +119,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/clients/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="79" selection-start="234" selection-end="234" vertical-scroll-proportion="-3.125">
+            <state line="5" column="79" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +128,7 @@
       <file leaf-file-name="orders.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/orders.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="17" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+            <state line="43" column="17" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,16 +146,16 @@
       <file leaf-file-name="checkout.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/checkout.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="13.375">
+            <state line="51" column="57" selection-start="1625" selection-end="1625" vertical-scroll-proportion="-20.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="orders_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="15" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+            <state line="86" column="25" selection-start="2427" selection-end="2427" vertical-scroll-proportion="0.5721393">
               <folding />
             </state>
           </provider>
@@ -185,16 +173,7 @@
       <file leaf-file-name="receipt.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/receipt.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="-13.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/orders/checkout.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="57" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.48877373">
+            <state line="21" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,10 +206,10 @@
         <option value="$PROJECT_DIR$/app/models/client.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
         <option value="$PROJECT_DIR$/app/views/clients/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/checkout.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/receipt.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/checkout.css" />
+        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
       </list>
     </option>
   </component>
@@ -281,6 +260,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -496,7 +476,6 @@
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -514,16 +493,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../gusteau copy" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="109" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="897" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="899" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="897" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="105" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="101" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -813,7 +792,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -896,13 +875,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/client.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/clients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -925,9 +897,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="2" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
@@ -946,14 +916,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/orders.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="17" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="43" column="17" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/clients/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="79" selection-start="234" selection-end="234" vertical-scroll-proportion="-3.125">
+        <state line="5" column="79" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -979,30 +949,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="15" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/receipt.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="-13.125">
+        <state line="21" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/checkout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="345" selection-end="345" vertical-scroll-proportion="0.49751243">
+        <state line="20" column="20" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/checkout.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="57" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.48877373">
+        <state line="51" column="57" selection-start="1625" selection-end="1625" vertical-scroll-proportion="-20.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="25" selection-start="2427" selection-end="2427" vertical-scroll-proportion="0.5721393">
           <folding />
         </state>
       </provider>

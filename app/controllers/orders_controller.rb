@@ -84,7 +84,6 @@ class OrdersController < ApplicationController
   def receipt
     @order = Order.find params[:id]
     @order_items = @order.order_items
-    binding.pry
     if params[:factura] == '1'
       render :layout => "checkout"
     else
