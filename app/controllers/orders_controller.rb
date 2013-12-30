@@ -47,6 +47,7 @@ class OrdersController < ApplicationController
     @order = Order.find params[:id]
     @order_items = @order.order_items
     @client = Client.find(@order.client_id)
+    binding.pry
   end
 
   def close

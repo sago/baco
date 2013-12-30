@@ -2,7 +2,11 @@
   <img src="/assets/logo_baco.jpg">
   <span class="factura">Básicos de Colima</span>
 </div>
+<<<<<<< HEAD
 <p class="data_table">Folio:  <%= "003A" %><span class="date">Fecha: <%= Date.current %></span></p>
+=======
+<p class="data_table">Folio:  <%= "#FolioModulo" %><span class="date">Fecha: <%= Date.current %></span></p>
+>>>>>>> 6599c13003477cd236d4be4432829359e662e9d6
 <p class="rfc_font">
   <b>RFC GOPS820118731</b>
 </p>
@@ -19,11 +23,19 @@
   </br></br>
   <img src="/assets/bar_code.png" class="data_table">
   <span class="small_letters">
+<<<<<<< HEAD
     Número de aprobación SICOFI: <%= "25740117" %></br>
     La reproducción apócrifa de este comprobante constituye un delito en
     los términos de las disposiciones fiscales.</br>
     Este comprobante tendrá una vigencia de dos años contados a partir de
     la fecha de aprobación de la asignación de folios, la cual es: <%= "31/12/2014" %></br>
+=======
+    Número de aprobación SICOFI: <%= "Numero autorización SECOFI" %></br>
+    La reproducción apócrifa de este comprobante constituye un delito en
+    los términos de las disposiciones fiscales.</br>
+    Este comprobante tendrá una vigencia de dos años contados a partir de
+    la fecha de aprobación de la asignación de folios, la cual es: <%= "Fecha de caducidad" %></br>
+>>>>>>> 6599c13003477cd236d4be4432829359e662e9d6
   </span></br>
 
   <% if @order.close_at && @order_items.present? %>

@@ -7,7 +7,16 @@
   <dd><%= @order.id %></dd>
   <dt><strong><%= 'Fecha/Hora Apertura' %>:</strong></dt>
   <dd><%= @order.created_at %></dd>
+<<<<<<< HEAD
 
+=======
+  <div>
+    <%= check_box_tag 'bill_check', 'Factura', false %> Factura
+    <% if check_box_tag.bill_check.true %>
+       params += [:status=> true]
+    <% end %>
+  </div>
+>>>>>>> 6599c13003477cd236d4be4432829359e662e9d6
 </dl>
 
 <%= form_for @order, :url => close_order_path(@order), :method => :post do |f| %>
